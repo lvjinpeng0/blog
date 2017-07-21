@@ -4,5 +4,5 @@
 [PhantomJS初探（页面截图）](https://github.com/lvjinpeng0/blog/issues/1)
 
 
-### participation
+### Participation
 [浏览器兼容性规范](https://github.com/lvjinpeng0/blog/issues/1)
