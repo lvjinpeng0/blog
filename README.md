@@ -2,10 +2,10 @@
 
 ### By Jerome
 
-[PhantomJS初探（页面截图）](https://github.com/lvjinpeng0/blog/issues/1)
+- [PhantomJS初探（页面截图）](https://github.com/lvjinpeng0/blog/issues/1)
 
-[Shadow DOM 浅析](https://github.com/lvjinpeng0/blog/issues/3)
+- [Shadow DOM 浅析](https://github.com/lvjinpeng0/blog/issues/3)
 
 
 ### Participation
-[浏览器兼容性规范](https://github.com/lvjinpeng0/blog/issues/1)
+- [浏览器兼容性规范](https://github.com/lvjinpeng0/blog/issues/1)
