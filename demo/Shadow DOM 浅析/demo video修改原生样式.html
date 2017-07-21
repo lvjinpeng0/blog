@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>shadow dom demo 1</title>
+    <style>
+      .to-red::-webkit-media-controls-play-button {
+        background: red;
+      }
+      .to-aqua::-webkit-media-controls-fullscreen-button {
+        background: aqua;
+      }
+
+    </style>
+  </head>
+
+  <body>
+  <video src="GirlsGeneration.mp4" id="video" controls></video>
+  <video src="blob:http://v.youku.com/a470cddc-7efd-4cb8-b17f-bc4f4e358642" id="video" controls></video>
+  <br>
+  <button id="to-red">给我变红</button>
+  <button id="to-aqua">给我变蓝</button>
+  <button id="to-back">给我变回来</button>
+  <script type="text/javascript">
+  var video = document.getElementById("video");
+  console.log(video.firstChild); // 返回 null
+
+var div = document.createElement('div')
+div.innerHTML = 'asd'
+
+video.appendChild(div)
+
+console.log('233',video.firstChild)
+    // var root = video.createShadowRoot();
+
+    // root.appendChild(document.importNode(template.content, true));
+    // var a = document.importNode(video.content, true);
+    console.log('222',video.content)
+
+
+
+
+
+
+
+
+
+
+
+  var toRed = document.getElementById("to-red");
+  var toAqua = document.getElementById("to-aqua");
+  var toBack = document.getElementById("to-back");
+  toRed.onclick = function(){
+    video.classList.add('to-red');
+  };
+  toAqua.onclick = function(){
+    video.classList.add('to-aqua');
+  };
+  toBack.onclick = function(){
+    video.classList.remove('to-red', 'to-aqua');
+  };
+  </script>
+  </body>
+</html>
+

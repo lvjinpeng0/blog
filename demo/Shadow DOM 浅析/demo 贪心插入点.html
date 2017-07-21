@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>content&template</title>
+</head>
+<body>
+    <div class="shadowhost">
+        <em class="shadowhost_content1">唱歌</em>
+        <em class="shadowhost_content2">跳舞</em>
+    </div>
+    <!-- S 模板标签 template -->
+    <template class="template">
+        <h1>你<content select=""></content>我<content select=".shadowhost_content2"></content>!</h1>
+    </template>
+    <!-- E 模板标签 template -->
+    <script>
+    var shadowHost = document.querySelector('.shadowhost');
+    var shadowRoot = shadowHost.createShadowRoot();
+    var template = document.querySelector('.template');
+    // template.content会返回一个文档片段，可以理解为另外一个document。
+    // 利用document.importNode获取节点，true表示深度克隆。
+    shadowRoot.appendChild(document.importNode(template.content, true));
+    </script>
+</body>
+</html>

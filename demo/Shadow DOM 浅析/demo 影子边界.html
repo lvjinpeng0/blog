@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>shadow dom demo 2</title>
+    <style>
+      .asdas::-webkit-slider-runnable-track {
+        background: red;
+      }
+      body .btn{
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+  <!-- 模板 -->
+  <template id="wgTemplate">
+    <style>
+      .btn {
+        color: #fff;
+        background: #006dcc;
+      }
+    </style>
+    <button type="button" class="btn">button widget</button>
+  </template>
+
+  <!-- 对比button -->
+  <button class="btn">what color? guess!</button>
+  <!-- shadow dom 容器 -->
+  <div id="my-widget"></div>
+  <input type="range" name="">
+  <input type="range" name="" class="asdas">
+  <script type='text/javascript'>
+    var host = document.querySelector("#my-widget")
+    var tp = document.querySelector("#wgTemplate")
+    var clone = document.importNode(tp.content, true)
+    host.createShadowRoot().appendChild(clone)
+  </script>
+  </body>
+</html>
+
