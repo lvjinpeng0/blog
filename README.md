@@ -7,5 +7,5 @@
 - [Web与Native交互 —— Web端使用说明文档](https://github.com/lvjinpeng0/blog/issues/4)
 
 
-### Participation
+### Participant
 - [浏览器兼容性规范](https://github.com/lvjinpeng0/blog/issues/1)
